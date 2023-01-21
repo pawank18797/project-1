@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages {
+        stage ('stage 1') {
+            steps {
+                sh 'touch file1'
+            }
+        }
+        stage ('stage 2') {
+            steps {
+                sh 'echo "hello my name pawan" >file1'
+            }
+        }
+        stage ('stage 3') {
+            steps {
+                sh 'mkdir folder1'
+            }
+            
+        }
+        stage ('stage 4') {
+            steps {
+                sh 'cp file1 folder1'
+            }
+        }
+        stage ('stage 5') {
+            steps {
+                sh 'echo hi my name is pawan'
+            }
+        }
+    }
+}
